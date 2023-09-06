@@ -9,3 +9,9 @@
     border: 2px solid;
 
   }
+
+  .Carousels{
+    text-align: center;
+    height: 150px;
+    width: 50%;
+  }

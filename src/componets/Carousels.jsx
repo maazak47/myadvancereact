@@ -23,35 +23,43 @@ import Carousel from 'react-bootstrap/Carousel';
       
       ];
 
-      cityDetails.map((value,index)=>{
-        return (value);
-    })
+      
     
 
  function CarouselCIty (){
-    return (
+
+  return (
+    <div className='Carousels'>
+          <Carousel data-bs-theme="dark">
+            { cityDetails.map((value, index)=>{
+              return (
+                <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={value.img}
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <h5>{value.name}</h5>
+                  <p>{value.description}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              )
+            })}
+
     
-      <>
-    <Carousel data-bs-theme="dark">
-      <Carousel.Item>
-        <img
-          cityName= {cityname}
-          src="holder.js/800x400?text=First slide&bg=f5f5f5https://hotelemc2.com/wp-content/uploads/2018/02/Why-Chicago-is-the-Best-City-in-the-World.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
      
-    
     </Carousel>
-  
-      </>
-    );
-     
+    </div>
+  )
+
+    
+    
  };
+
  
+
+
+
  export default CarouselCIty;
 
