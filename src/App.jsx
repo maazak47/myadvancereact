@@ -10,7 +10,8 @@ import Citydetails from './componets/Citydetails'
 import Pcity from './componets/Pcity'
 import Conatiner from "./componets/Conatiner"
 import UserTable from "./componets/usertable"
-
+import UserDynamictable from"./componets/userDynamictable"
+import CarouselCIty from "./componets/Carousels"
 
 
 function App() {
@@ -42,6 +43,12 @@ function App() {
  
   return (
     <>
+      <CarouselCIty/>
+
+    <hr />
+    < UserDynamictable />
+    <br />
+    <hr />
     <Greeting data ='maaz' name='khan' />  
     <hr /><hr />
     <Userdetails name = "maaz" age = "23" city='nizamabad'/>
