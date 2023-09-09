@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
-    const cityDetails = [
+  export  const cityDetails = [
         {
           cityName: "New York",
           description: "New York City, often simply referred to as New York, is the most populous city in the 0United States. It is known for its iconic skyline, cultural diversity, and a vibrant arts scene. The city is home to landmarks such as the Statue of Liberty, Times Square, Central Park, and the Empire State Building.",

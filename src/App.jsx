@@ -12,6 +12,10 @@ import Conatiner from "./componets/Conatiner"
 import UserTable from "./componets/usertable"
 import UserDynamictable from"./componets/userDynamictable"
 import CarouselCIty from "./componets/Carousels"
+import Counter from './componets/hooks/useState/counter'
+import CityAccordian from './componets/CityAccordian'
+import ChangeColor from './componets/hooks/useState/ChangeColor'
+import InputVAlue, { ClickInputValue } from './componets/hooks/useState/gettingInputValue'
 
 
 function App() {
@@ -42,8 +46,27 @@ function App() {
 
  
   return (
+    
     <>
-      <CarouselCIty/>
+    < ClickInputValue/>
+    <br /><hr />
+    <InputVAlue/>
+    <hr /><br />
+  <ChangeColor/>
+
+
+    
+  <br />
+  <hr />
+     <Counter/>
+     <hr />
+     <br />
+     
+    <CityAccordian/>
+
+
+{/* <CarouselCIty/>
+      <br />
 
     <hr />
     < UserDynamictable />
@@ -64,7 +87,7 @@ function App() {
       <li>maaz</li>
     </ol>
     </Conatiner>
-    <UserTable/>
+    <UserTable/> */}
 
     </>
     

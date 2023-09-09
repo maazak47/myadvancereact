@@ -11,7 +11,9 @@
   }
 
   .Carousels{
+    padding: 2px 5px;
     text-align: center;
     height: 150px;
     width: 50%;
+    
   }
