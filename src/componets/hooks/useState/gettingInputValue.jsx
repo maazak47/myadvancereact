@@ -17,21 +17,4 @@ const InputVAlue = ()=>{
 
 };
 
-export function ClickInputValue (){
-     const [] = useState ("")
-     const Onchange = ()=>{
-
-     }
-  
-     }
-    return(
-   <>
-   <input type="text" onChange={} />
-    <br />
-   <button onClick={}>click me to show value</button> <br />
-   <h1>{value}</h1>
-   </>
-    )
-}
-
 export default InputVAlue;

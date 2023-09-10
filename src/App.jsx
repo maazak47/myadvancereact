@@ -15,7 +15,11 @@ import CarouselCIty from "./componets/Carousels"
 import Counter from './componets/hooks/useState/counter'
 import CityAccordian from './componets/CityAccordian'
 import ChangeColor from './componets/hooks/useState/ChangeColor'
-import InputVAlue, { ClickInputValue } from './componets/hooks/useState/gettingInputValue'
+import InputVAlue from "./componets/hooks/useState/gettingInputValue"
+import { NextUSer } from './componets/hooks/useState/nextUser'
+import { AddRectangle } from './componets/hooks/useState/addRectangle'
+
+
 
 
 function App() {
@@ -48,7 +52,9 @@ function App() {
   return (
     
     <>
-    < ClickInputValue/>
+    <AddRectangle/> 
+    <hr /> <br />
+    <NextUSer/>
     <br /><hr />
     <InputVAlue/>
     <hr /><br />
