@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
- 
 import './App.css'
 import Greeting from './componets/Greeting'
 import Userdetails from './componets/Userdetails'
@@ -17,7 +16,9 @@ import CityAccordian from './componets/CityAccordian'
 import ChangeColor from './componets/hooks/useState/ChangeColor'
 import InputVAlue from "./componets/hooks/useState/gettingInputValue"
 import { NextUSer } from './componets/hooks/useState/nextUser'
-import { AddRectangle } from './componets/hooks/useState/addRectangle'
+import InputValueB from './componets/hooks/useState/getInputvalueB'
+import FullName from './componets/hooks/useState/getFullName'
+import ShowImg from './componets/hooks/useState/showImg'
 
 
 
@@ -52,26 +53,26 @@ function App() {
   return (
     
     <>
-    <AddRectangle/> 
-    <hr /> <br />
-    <NextUSer/>
+    <ShowImg/>
+    <br /><hr />
+    {/* <FullName/>
+    <br /><hr />
+     <NextUSer/>
+    <br /> <hr />
+    <InputValueB/>
     <br /><hr />
     <InputVAlue/>
     <hr /><br />
   <ChangeColor/>
-
-
-    
   <br />
   <hr />
-     <Counter/>
-     <hr />
-     <br />
-     
-    <CityAccordian/>
+ <Counter/>
+  <hr />
+  <br />
+  <CityAccordian/>
 
 
-{/* <CarouselCIty/>
+<CarouselCIty/>
       <br />
 
     <hr />
@@ -93,7 +94,7 @@ function App() {
       <li>maaz</li>
     </ol>
     </Conatiner>
-    <UserTable/> */}
+    <UserTable/>  */}
 
     </>
     
