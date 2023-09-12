@@ -13,7 +13,7 @@ return (
 { showimg === true && ( <img src="https://th.bing.com/th/id/OIP._RhgQsm6JIki2j75xgSy7QHaEK?pid=ImgDet&rs=1" alt="img" />)
 } <br /> <br /> 
              
-             <button onClick={Viewimg}>view/hide</button>
+             <button onClick={Viewimg}>{showimg === true ? "hide" : "view"}</button>
         </div>
     )
 };

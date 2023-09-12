@@ -19,6 +19,7 @@ import { NextUSer } from './componets/hooks/useState/nextUser'
 import InputValueB from './componets/hooks/useState/getInputvalueB'
 import FullName from './componets/hooks/useState/getFullName'
 import ShowImg from './componets/hooks/useState/showImg'
+import Rectangle from './componets/hooks/useState/addRectangle'
 
 
 
@@ -53,6 +54,8 @@ function App() {
   return (
     
     <>
+    <Rectangle/>
+    <br /><hr />
     <ShowImg/>
     <br /><hr />
     {/* <FullName/>
