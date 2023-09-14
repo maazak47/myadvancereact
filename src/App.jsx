@@ -20,6 +20,7 @@ import InputValueB from './componets/hooks/useState/getInputvalueB'
 import FullName from './componets/hooks/useState/getFullName'
 import ShowImg from './componets/hooks/useState/showImg'
 import Rectangle from './componets/hooks/useState/addRectangle'
+import FormAssign from './componets/hooks/useState/FormAssign'
 
 
 
@@ -52,9 +53,12 @@ function App() {
 
  
   return (
-    
+     
     <>
-    <Rectangle/>
+    <FormAssign/>
+    
+    <br /><hr />
+    {/* <Rectangle/>
     <br /><hr />
     <ShowImg/>
     <br /><hr />
@@ -97,7 +101,7 @@ function App() {
       <li>maaz</li>
     </ol>
     </Conatiner>
-    <UserTable/>  */}
+    <UserTable/>   */}
 
     </>
     
