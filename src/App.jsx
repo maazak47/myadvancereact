@@ -21,6 +21,9 @@ import FullName from './componets/hooks/useState/getFullName'
 import ShowImg from './componets/hooks/useState/showImg'
 import Rectangle from './componets/hooks/useState/addRectangle'
 import FormAssign from './componets/hooks/useState/FormAssign'
+import { FormHandling } from './componets/hooks/useState/formHandling'
+import { FormHandlingLi } from './componets/hooks/useState/FormhandlingLi'
+import FormAssignLi from './componets/hooks/useState/FormAssignLi'
 
 
 
@@ -55,10 +58,18 @@ function App() {
   return (
      
     <>
-    <FormAssign/>
+   <FormAssignLi/>
+    <br /> <hr />
+   
     
-    <br /><hr />
-    {/* <Rectangle/>
+    
+    
+
+    { /*  <FormAssign/>
+    <br/> <hr>
+    <FormHandling/>
+     <Rectangle/>
+
     <br /><hr />
     <ShowImg/>
     <br /><hr />
