@@ -3,49 +3,57 @@ import { useForm } from "react-hook-form"
 
 const FormAssignLi = ()=>{
 
-    const { register, handleSubmit, formState, } = useForm()
+    const { register, handleSubmit, formState,reset } = useForm();
     
-      const {errors} = formState
-     // console.log(errors)
+      const {errors} = formState ;
+      // console.log(errors)
 
     const submit = (userdata)=>{
      console.log(userdata) ;
-    }
+     reset();
+    };
 
     return(
-        <div>
-         <form  onSubmit={handleSubmit(submit)} >
-             <fieldset>
+         <div>
+     <form  onSubmit={handleSubmit(submit)} >
+          <fieldset>
+                
+       
+
                  <div>
-                     <select name="" id="" {...register("lang")} >
-                     <option value="select lang">lang select</option>
+                     <select {...register("lang",
+                     {required: {value : true, message : "plz select your lang"},})} >
+                     <option value="">lang select</option>
                          <option value="hindi">hindi</option>
                          <option value="english">english</option>
                          <option value="urdu">urdu</option>
                      </select>
-                     <p style={{color : "red"}}>{}</p>
-                 </div>
+                     <p style={{ color: "red" }}>{errors.lang?.message}</p>
+                 </div> 
  
                  <div>
                      <label htmlFor="">First name :</label>  
-                     <input type="text"  {... register("fname" ,
-                     { require :{value :true, message : "user name requried"} })}/>
-                     <p style={{color : "red"}}>{errors?.fname?.message}</p>
+                     <input type="text"  {... register("firstname",
+                     { required :{value : true, message : "enter first name"} })}/>
+                   <p style={{ color: "red" }}>{errors?.firstname?.message}</p>
                  </div> <br />
                  <div><label htmlFor="">last Name :</label>
-                 <input type="text"   {...register("lname")} />
-                 <p style={{color : "red"}}>{}</p>
+                 <input type="text"   {...register("lname",
+                 {required :{value : true , message : "enter last name"}})} />
+                 <p style={{color : "red" }}>{errors.lname?.message}</p>
                  </div> <br />
                  <div>
                      <label htmlFor="">gender :</label>
-                     <input type="radio" name="gender" value="male" {...register("gender")} /> male
+                     <input type="radio" name="gender" value="male" {...register("gender",
+                      {required : {value : true, message : "plz select you gender"}})} /> male
                      <input type="radio" name= "gender" value="female" {...register("gender")} /> female
-                     <p style={{color : "red"}}>{}</p>
+                     <p style={{color : "red"}}>{errors.gender?.message}</p>
                  </div>
                  <div>
                      <label htmlFor="">Email :</label>
-                     <input type="email" {...register("email")} />
-                     <p style={{color : "red"}}>{}</p>
+                     <input type="email" {...register("email",
+                      {required : {value : true , message : "plz enter your email"}})} />
+                     <p style={{color : "red"}}>{errors.email?.message}</p>
                  </div>
  
                  <div>
@@ -69,6 +77,6 @@ const FormAssignLi = ()=>{
         </div>
      )
 
-}
+};
 
 export default FormAssignLi;

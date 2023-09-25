@@ -24,32 +24,36 @@ import FormAssign from './componets/hooks/useState/FormAssign'
 import { FormHandling } from './componets/hooks/useState/formHandling'
 import { FormHandlingLi } from './componets/hooks/useState/FormhandlingLi'
 import FormAssignLi from './componets/hooks/useState/FormAssignLi'
+import Curdopt from './componets/CRUD/CrudOpt'
+import ModelContainer from './componets/hooks/useState/modelContainer'
+
+import { CrudOperations } from './componets/CRUD/Crudopta'
 
 
 
+  function App() {
 
-function App() {
-  const nanded={
+
+  const nanded ={
     name: "naned",
     code: "46541",
     img: "vite.svg",
-    population: "10cr",
-    popularPlace: "railway station",    
-    state: "maharstra",
-  };
-
-  const Mumbai = {
+     population: "10cr",
+    popularPlace: "railway station", 
+    state: "maharstra",       
+ }
+   const Mumbai = {
     name: "mumbai",
-    code: "658543",
+     code: "658543",
     img: "vite.svg",
-    population: "50cr",
+  population: "50cr",
     popularPlace: "india way of gate",
-  };
-  const Nizamabad = {
-    name: "nizamabad",
-    code: "503001",
+   };
+   const Nizamabad = {
+     name: "nizamabad",
+     code: "503001",
     img:"vite.svg",
-    population : "50cr",
+ population : "50cr",
     popularPlace : "nizamsagar",
 
   };
@@ -57,28 +61,38 @@ function App() {
  
   return (
      
-    <>
-   <FormAssignLi/>
-    <br /> <hr />
+    <>  
+   <CrudOperations/>
+ 
+  
+    
+    
    
     
     
     
 
-    { /*  <FormAssign/>
+    { /*  
+    <Curdopt/>
+       <FormAssignLi/>
+    <FormAssign/>
+         <FormHandlingLi/>
+     <InputValueB/>
     <br/> <hr>
-    <FormHandling/>
+    
      <Rectangle/>
 
     <br /><hr />
     <ShowImg/>
     <br /><hr />
-    {/* <FullName/>
+    {/* 
     <br /><hr />
      <NextUSer/>
     <br /> <hr />
-    <InputValueB/>
+       <FullName/>
     <br /><hr />
+     <ModelContainer/>
+    <br/> <hr / >
     <InputVAlue/>
     <hr /><br />
   <ChangeColor/>
