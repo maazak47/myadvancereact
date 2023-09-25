@@ -2,37 +2,40 @@ import React, { useState } from "react"
 import { Button, Form, Table } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-export  const CrudOperations = ()=>{
+const CurdOptAss = ()=>{
 
     const [users, setusers] = useState ([]);
    // console.log(users)
-   const [edit, setEdit] = useState(null);
-
+    
+   const [editindex, SetEditindex] = useState (null)
 
     const {register, handleSubmit,formState, reset, }= useForm()
-    
 
     const {errors} = formState ;
         
     const submit = (userData) => {
     //  console.log(userData);
-      if (edit === null) {
+    if (editindex === null){
         setusers ([...users, userData]) ;
         reset();
-      } 
-      
-       if (edit != null) {
-        const newArr = users.map((value, index)=>{
-            if (edit === index){
-                return userData;
-            }else {
-                return value
-            }
-        })
-        setusers(newArr);
-        setEdit (null)
-      }
-      };
+    }
+     if (editindex != null){
+      const NewArr = users.map((value, index)=>{
+             if (editindex === index){
+               return userData ;
+             } else {
+              return value ;
+             };
+      }) ;
+
+      setusers (NewArr);
+      SetEditindex (null) ;
+
+
+     }
+
+     reset({ name: "", age: "", address: "", gender: "" });
+  };
 
       const OnDelet = (userindex)=>{
          const newarr = users.filter((value, index)=>{
@@ -43,13 +46,11 @@ export  const CrudOperations = ()=>{
          setusers(newarr)
       }
 
-      const onEdit = (value, index)=>{
-                 
-                  reset (value) 
-               
-                setEdit(index)
+      const OnEdit= (value,index)=>{
+         // console.log(value)
+         reset (value);
+         SetEditindex(index);
 
-                
       }
     return(
         <div>
@@ -124,7 +125,7 @@ export  const CrudOperations = ()=>{
                         <td>{value.age}</td>
                         <td>{value.address}</td>
                         <Button onClick={()=>{OnDelet(index)}}>Delete</Button>
-                        <Button onClick={() => onEdit(value, index)}>edit</Button>
+                        <Button onClick={()=>{OnEdit(value, index)}}>Edit</Button>
                     </tr>
                  )
                })}
@@ -139,3 +140,4 @@ export  const CrudOperations = ()=>{
     )
 };
 
+export default CurdOptAss;

@@ -26,8 +26,12 @@ import { FormHandlingLi } from './componets/hooks/useState/FormhandlingLi'
 import FormAssignLi from './componets/hooks/useState/FormAssignLi'
 import Curdopt from './componets/CRUD/CrudOpt'
 import ModelContainer from './componets/hooks/useState/modelContainer'
+import CurdOptAss from './componets/CRUD/CrudOptAss'
+import UseCase from './componets/hooks/UseRef/example'
+import UseCase2 from './componets/hooks/UseRef/example1'
 
-import { CrudOperations } from './componets/CRUD/Crudopta'
+
+
 
 
 
@@ -62,8 +66,8 @@ import { CrudOperations } from './componets/CRUD/Crudopta'
   return (
      
     <>  
-   <CrudOperations/>
- 
+   
+   <UseCase2/>
   
     
     
@@ -73,6 +77,10 @@ import { CrudOperations } from './componets/CRUD/Crudopta'
     
 
     { /*  
+       
+       <UseCase/>
+      <br/> <hr>
+    < CurdOptAss/>
     <Curdopt/>
        <FormAssignLi/>
     <FormAssign/>
