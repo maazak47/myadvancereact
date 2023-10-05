@@ -8,7 +8,7 @@ const UseCase2 = ()=>{
        
     useEffect(()=>{
         prev.current=counter
-    },[]);
+    },[counter]);
     const Click = ()=>{
         Setcounter(counter+1);  
     };

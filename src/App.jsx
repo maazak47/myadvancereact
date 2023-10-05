@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -29,6 +29,7 @@ import ModelContainer from './componets/hooks/useState/modelContainer'
 import CurdOptAss from './componets/CRUD/CrudOptAss'
 import UseCase from './componets/hooks/UseRef/example'
 import UseCase2 from './componets/hooks/UseRef/example1'
+import UseCase1 from './componets/hooks/UseMemo/example'
 
 
 
@@ -61,31 +62,46 @@ import UseCase2 from './componets/hooks/UseRef/example1'
     popularPlace : "nizamsagar",
 
   };
+   const bottomRef = useRef();
+   const Topref = useRef();
 
+  const Bottom = ()=>{
+    Topref.current.scrollIntoView()
+  };
+
+  const ToTop = ()=>{
+ 
+    bottomRef.current.scrollIntoView()
+  };
  
   return (
      
     <>  
-   
-   <UseCase2/>
-  
-    
-    
-   
-    
+     
     
     
 
     { /*  
-       
-       <UseCase/>
-      <br/> <hr>
+     
+      <button onClick={Bottom} ref={bottomRef}>to bottom</button>
+      
+      <UseCase1/>
+       <br/> <hr/>
+   <UseCase2/>
+  
+    
+      
+   <UseCase/>
+      <br/> <hr/>
     < CurdOptAss/>
     <Curdopt/>
        <FormAssignLi/>
     <FormAssign/>
          <FormHandlingLi/>
      <InputValueB/>
+   
+    <button  onClick={ToTop} ref={Topref} >to Top</button>
+    
     <br/> <hr>
     
      <Rectangle/>
